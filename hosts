@@ -1,0 +1,29 @@
+# localhost name resolution is handled within DNS itself.
+#	127.0.0.1       localhost
+#	::1             localhost
+
+############# wy #############
+127.0.0.1	ui.wangyan.name
+
+127.0.0.1	upms.wangyan.name
+
+127.0.0.1	cms.wangyan.name
+
+127.0.0.1	pay.wangyan.name
+
+127.0.0.1	ucenter.wangyan.name
+
+127.0.0.1	wechat.wangyan.name
+
+127.0.0.1	api.wangyan.name
+
+127.0.0.1	oss.wangyan.name
+
+127.0.0.1 config.wangyan.name
+
+127.0.0.1	zkserver
+
+127.0.0.1	rdserver
+
+127.0.0.1	dbserver
+############# wy #############

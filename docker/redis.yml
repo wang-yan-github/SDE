@@ -1,0 +1,14 @@
+version: '2'
+services:
+  app-redis:
+    container_name: app-redis
+    image: redis:5.0.5
+    restart: always
+    hostname: rdserver
+    environment:
+      - REDIS_PASSWORD=123456
+      #      - ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - ./../redis/data:/bitnami
+    ports:
+      - 6379:6379

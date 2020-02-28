@@ -1,0 +1,12 @@
+version: '2'
+services:
+  app-zookeeper:
+    container_name: app-zookeeper
+    image: zookeeper:3.5
+    hostname: zkserver #容器名
+    restart: always
+    ports:
+      - 2181:2181
+    #volumes:
+    #  - /usr/local/docker_app/zookeeper/zoo1/data:/data
+    #  - /usr/local/docker_app/zookeeper/zoo1/datalog:/datalog

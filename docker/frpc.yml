@@ -1,0 +1,8 @@
+version: '2'
+services:
+  app-frpc:
+    container_name: app-frpc
+    image: cloverzrg/frpc-docker:0.27.1
+    restart: always
+    volumes:
+      - ./../frp/frpc.ini:/conf/frpc.ini

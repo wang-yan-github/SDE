@@ -1,0 +1,71 @@
+version: '2'
+services:
+  app-mysql:
+    extends:
+      file: docker/mysql.yml
+      service: app-mysql
+    networks:
+      app-net:
+        aliases:
+          - mysql-net
+
+  app-redis:
+    extends:
+      file: docker/redis.yml
+      service: app-redis
+    networks:
+      app-net:
+        aliases:
+          - redis-net
+
+  app-frpc:
+    extends:
+      file: docker/frpc.yml
+      service: app-frpc
+    networks:
+      app-net:
+        aliases:
+          - frpc-net
+
+  app-nginx:
+    extends:
+      file: docker/nginx.yml
+      service: app-nginx
+    networks:
+      app-net:
+        aliases:
+          - nginx-net
+
+  app-activemq:
+    extends:
+      file: docker/activemq.yml
+      service: app-activemq
+    networks:
+      app-net:
+        aliases:
+          - activemq-net
+
+  app-zookeeper:
+    extends:
+      file: docker/zookeeper.yml
+      service: app-zookeeper
+    networks:
+      app-net:
+        aliases:
+          - zookeeper-net
+
+  app-dubbo:
+    extends:
+      file: docker/dubbo.yml
+      service: app-dubbo
+    depends_on:
+      - app-zookeeper
+    links:
+      - app-zookeeper:zkserver
+    networks:
+      app-net:
+        aliases:
+          - dubbo-net
+
+networks:
+  app-net:

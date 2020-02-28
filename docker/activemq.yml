@@ -1,0 +1,12 @@
+version: '2'
+services:
+  app-activemq:
+    container_name: app-activemq
+    image: webcenter/activemq
+    hostname: mqserver
+    restart: always
+    volumes:
+      - ./../activemq/log:/var/log/activemq
+      - ./../activemq/data:/data
+    ports:
+      - 8161:8161
