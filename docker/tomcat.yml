@@ -1,0 +1,11 @@
+version: '2'
+services:
+  app-mysql:
+    container_name: app-tomcat
+    image: tomcat:7
+    restart: always
+    hostname: dbserver
+    ports:
+      - 5050:8080
+    volumes:
+      - ./../tomcat/webapps:/usr/local/tomcat/webapps
