@@ -5,3 +5,11 @@
 docker-compose -f docker/mysql.yml up -d
 # 结束
 docker-compose -f docker/mysql.yml down
+#停止容器
+docker-compose stop
+#销毁容器服务
+docker-compose down
+#重启容器
+docker-compose restart
+#启动容器
+docker-compose start
